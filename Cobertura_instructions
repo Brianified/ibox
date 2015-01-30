@@ -1,0 +1,3 @@
+run cobertura as so to read the integration tests
+
+cobertura:cobertura -Pitcov

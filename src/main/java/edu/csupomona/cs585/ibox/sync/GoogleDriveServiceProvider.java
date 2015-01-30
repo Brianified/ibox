@@ -17,8 +17,8 @@ import com.google.api.services.drive.DriveScopes;
 
 public class GoogleDriveServiceProvider {
 
-	private static String CLIENT_ID = "1056444824163-53rlme4cc3dn4bu1e52vi8ojpf7idl0g.apps.googleusercontent.com";
-	private static String CLIENT_SECRET = "ZFq-WKKE1i1mWom5QtYun14p";
+	private static String CLIENT_ID = " 257633467452-a72af1k4nu7u15e7ud412847ef8ncf0k.apps.googleusercontent.com";
+	private static String CLIENT_SECRET = "I9yZtyMMU2VEJWRiQLDu-wVf";
 
 	private static String REDIRECT_URI = "urn:ietf:wg:oauth:2.0:oob";
 
@@ -58,6 +58,7 @@ public class GoogleDriveServiceProvider {
 
 		GoogleTokenResponse response = flow.newTokenRequest(code).setRedirectUri(REDIRECT_URI).execute();
 		GoogleCredential credential = new GoogleCredential().setFromTokenResponse(response);
+
 
 		//Create a new authorized API client
 		googleDriveClient = new Drive.Builder(httpTransport, jsonFactory, credential).build();
